@@ -3,12 +3,19 @@
     <head>
          <title> data </title>
          <style>
+             h2 {
+            
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            font-family: 'Courier New', Courier, monospace;
            
   .center {
             display: block;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 90px;
+            margin-top: 20px;
             margin-bottom: 90px;
             width: 50%;
              }
@@ -16,9 +23,13 @@
          </style>
     </head>
     <body>
+        <h2> Temperature </h2>
         <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1386483/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" class="center"></iframe>
+        <h2> Specific Conductivity </h2>
         <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1386483/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" class="center"></iframe>
+        <h2> Dissolved Oxygen </h2>
         <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1386483/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" class="center"></iframe>
+        <h2> pH </h2>
         <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1386483/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" class="center"></iframe>
    </body>
 </html>
