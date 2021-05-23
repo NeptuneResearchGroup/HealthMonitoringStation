@@ -26,7 +26,7 @@
               background-attachment: fixed;
               background-size: cover;
              }
-             img{
+             .loggy{
                  width:2in;
                  height: 2in;
              }
@@ -39,31 +39,6 @@
                  display:block;
                  width:1in;
              }
-             .tab {
-                 overflow: hidden;
-                 background-color: rgb(2, 85, 150);
-             }    
-            .tab button {
-                 background-color: inherit;
-                 float: left;
-                 border: none;
-                 outline: none;
-                 cursor: pointer;
-                 padding: 14px 25px;
-                 transition: 0.3s;
-             }
-             .tab button:hover {
-                 background-color: powderblue;
-             }
-             .tab button.active {
-                  background-color: seagreen;
-             }
-             .tabcontent {
-                display: none;
-                padding: 6px 20px;
-                border: 1px solid white;
-                border-top: none;
-            }
              .content {
                  padding: 18px 20px;
                  margin-top:45px;
@@ -71,16 +46,51 @@
                  margin-left:200px;
                  border: 2px solid white;
              }
+             .dropbtn {
+                 background-color: powderblue;
+                 padding: 6px;
+                 border: none;
+             }
+            .menuTab {
+                margin-left=.3in;
+                margin-top= .3in;
+             }
+             .dropdown {
+                 position: relative;
+                 display: inline-block;
+             }
+             .dropdown-content {
+                 display: none;
+                 position: absolute;
+                 background-color: powderblue;
+                 min-width: 160px;
+                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                 z-index: 1;
+             }
+             .dropdown-content a {
+                 color: black;
+                 padding: 12px 16px;
+                 text-decoration: none;
+                 display: block;
+             }
+             .dropdown-content a:hover {background-color: seagreen;}
+             .dropdown:hover .dropdown-content {display: block;}
+             .dropdown:hover .dropbtn {background-color: seagreen;}
          </style>
     </head>
     <body>
+        <div class= "loggy">
         <img src="clearlogo.png" alt="logo"> 
-        <div class="tab">
-              <button class="tablinks" onclick="reroute(event, 'Home')">Home</button>
-              <button class="tablinks" onclick="reroute(event, 'About')">About Us</button>
-              <button class="tablinks" onclick="drop(event, 'Data')">Data</button>
         </div>
         <div class= "content">
+        <div class= "dropdown">
+            <button class="dropbtn"><img src="menu.png" alt="menuIcon"></button>
+                  <div class="dropdown-content">
+                       <a href="https://neptuneresearchgroup.github.io/Home/">Home</a>
+                       <a href="https://neptuneresearchgroup.github.io/HealthMonitoringStation/">About Us</a>
+                       <a href="https://neptuneresearchgroup.github.io/HealthMonitoringStation/Data.html">Data</a>
+                  </div>
+            </div>
         <h2> Temperature </h2>
         <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1386483/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" class="center"></iframe>
         <h2> Specific Conductivity </h2>
